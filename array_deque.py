@@ -18,7 +18,7 @@ class circle_array_deque:
             self.count = self.count + 1
 
         else:
-            return "Can't Push it"
+            return "Can't Push"
 
             
     def push_rear(self, data):
@@ -27,17 +27,36 @@ class circle_array_deque:
             self.deque[self.rear] = data
             self.count = self.count + 1
             self.rear = self.rear -1
-            if self.rear == -(self.self.size - 1):
-                self.rear = self.size - 1
+            if self.rear == -(self.size) - 1:
+                self.rear = -1
             
         else:
-            return "Can't Push it"
+            return "Can't Push"
     
     def pop_front(self):
-        pass
+
+        if self.front == 0:
+            self.front = self.size - 1
+            if self.deque[self.front] == None:
+                self.front = 0
+                return "Can't pop" 
+            else:
+                data = self.deque[self.front]
+                
+                return data
+        
+        
+        else:
+        
+        
+
+        
+            
 
     def pop_rear(self):
-        pass
+        if self.deque[self.deque + 1] != None:
+            self.deque = self.deque +
+            
 
     def is_empty(self):
 
